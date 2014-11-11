@@ -17,6 +17,7 @@ namespace Microsoft.WindowsAzure.Commands.Test.HDInsight.CmdLetTests
     {
         public const string AddAzureHDInsightConfigValues = "Add-AzureHDInsightConfigValues";
         public const string AddAzureHDInsightMetastore = "Add-AzureHDInsightMetastore";
+        public const string AddAzureHDInsightScriptAction = "Add-AzureHDInsightScriptAction";
         public const string AddAzureHDInsightStorage = "Add-AzureHDInsightStorage";
         public const string Arguments = "Args";
         public const string Certificate = "Certificate";
@@ -78,6 +79,10 @@ namespace Microsoft.WindowsAzure.Commands.Test.HDInsight.CmdLetTests
         public const string RemoveAzureHDInsightCluster = "Remove-AzureHDInsightCluster";
         public const string RevokeAzureHDInsightHttpAccess = "Revoke-AzureHDInsightHttpServicesAccess";
         public const string SetAzureHDInsightDefaultStorage = "Set-AzureHDInsightDefaultStorage";
+        public const string ConfigActionName = "Name"; 
+        public const string ConfigActionClusterRoleCollection = "ClusterRoleCollection"; 
+        public const string ScriptActionUri = "Uri"; 
+        public const string ScriptActionParameters = "Parameters"; 
         public const string Show = "Show";
         public const string Skip = "Skip";
         public const string SqlAzureServerName = "SqlAzureServerName";
