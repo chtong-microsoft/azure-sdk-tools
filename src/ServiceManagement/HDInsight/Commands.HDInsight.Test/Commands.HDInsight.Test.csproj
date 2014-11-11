@@ -150,6 +150,7 @@
     <Compile Include="HDInsight\CmdLetTests\StartJobsCmdletTests.cs" />
     <Compile Include="HDInsight\CmdLetTests\TestSetupCleanup.cs" />
     <Compile Include="HDInsight\CmdLetTests\WaitCmdletTest.cs" />
+    <Compile Include="HDInsight\CommandTests\AddAzureHDInsightScriptActionCommandTests.cs" />
     <Compile Include="HDInsight\CommandTests\AddHDInsightConfigValuesCommandTests.cs" />
     <Compile Include="HDInsight\CommandTests\ConnectClusterCommandTests.cs" />
     <Compile Include="HDInsight\CommandTests\HadoopCustomJobCerationDetails.cs" />

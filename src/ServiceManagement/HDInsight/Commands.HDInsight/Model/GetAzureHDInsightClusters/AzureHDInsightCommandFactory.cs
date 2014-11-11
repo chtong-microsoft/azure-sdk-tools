@@ -30,6 +30,11 @@ namespace Microsoft.WindowsAzure.Management.HDInsight.Cmdlet.GetAzureHDInsightCl
             return Help.SafeCreate<AddAzureHDInsightMetastoreCommand>();
         }
 
+        public IAddAzureHDInsightScriptActionCommand CreateAddScriptAction()  
+        {  
+            return Help.SafeCreate<AddAzureHDInsightScriptActionCommand>();  
+        }  
+
         public IAddAzureHDInsightStorageCommand CreateAddStorage()
         {
             return new AddAzureHDInsightStorageCommand();

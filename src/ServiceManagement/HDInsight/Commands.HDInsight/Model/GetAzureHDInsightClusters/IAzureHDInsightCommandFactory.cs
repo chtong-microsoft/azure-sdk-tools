@@ -24,6 +24,8 @@ namespace Microsoft.WindowsAzure.Management.HDInsight.Cmdlet.GetAzureHDInsightCl
 
         IAddAzureHDInsightStorageCommand CreateAddStorage();
 
+        IAddAzureHDInsightScriptActionCommand CreateAddScriptAction();
+
         INewAzureHDInsightClusterCommand CreateCreate();
 
         IRemoveAzureHDInsightClusterCommand CreateDelete();

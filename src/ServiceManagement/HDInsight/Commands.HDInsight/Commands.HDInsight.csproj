@@ -125,6 +125,7 @@
   <ItemGroup>
     <Compile Include="Cmdlet\AddAzureHDInsightConfigValuesCmdlet.cs" />
     <Compile Include="Cmdlet\AddAzureHDInsightMetastoreCmdlet.cs" />
+    <Compile Include="Cmdlet\AddAzureHDInsightScriptActionCmdlet.cs" />
     <Compile Include="Cmdlet\AddAzureHDInsightStorageCmdlet.cs" />
     <Compile Include="Cmdlet\AzureHDInsightCmdlet.cs" />
     <Compile Include="Cmdlet\AzureHdInsightPowerShellHardCodes.cs" />
@@ -148,8 +149,10 @@
     <Compile Include="Cmdlet\StopAzureHDInsightJobCmdlet.cs" />
     <Compile Include="Cmdlet\UseAzureHDInsightClusterCmdlet.cs" />
     <Compile Include="Cmdlet\WaitAzureHDInsightJobCmdlet.cs" />
+    <Compile Include="Model\Commands\BaseCommandInterfaces\IAddAzureHDInsightConfigActionBase.cs" />
     <Compile Include="Model\Commands\BaseCommandInterfaces\IAddAzureHDInsightConfigValuesBase.cs" />
     <Compile Include="Model\Commands\BaseCommandInterfaces\IAddAzureHDInsightMetaStoreBase.cs" />
+    <Compile Include="Model\Commands\BaseCommandInterfaces\IAddAzureHDInsightScriptActionBase.cs" />
     <Compile Include="Model\Commands\BaseCommandInterfaces\IAddAzureHDInsightStorageBase.cs" />
     <Compile Include="Model\Commands\BaseCommandInterfaces\IAzureHDInsightStorageHandler.cs" />
     <Compile Include="Model\Commands\BaseCommandInterfaces\IAzureHDInsightStorageHandlerFactory.cs" />
@@ -171,6 +174,7 @@
     <Compile Include="Model\Commands\BaseCommandInterfaces\IWaitAzureHDInsightJobBase.cs" />
     <Compile Include="Model\Commands\CommandImplementations\AddAzureHDInsightConfigValuesCommand.cs" />
     <Compile Include="Model\Commands\CommandImplementations\AddAzureHDInsightMetastoreCommand.cs" />
+    <Compile Include="Model\Commands\CommandImplementations\AddAzureHDInsightScriptActionCommand.cs" />
     <Compile Include="Model\Commands\CommandImplementations\AddAzureHDInsightStorageCommand.cs" />
     <Compile Include="Model\Commands\CommandImplementations\AzureHDInsightStorageHandler.cs" />
     <Compile Include="Model\Commands\CommandImplementations\AzureHDInsightStorageHandlerFactory.cs" />
@@ -196,6 +200,7 @@
     <Compile Include="Model\Commands\CommandImplementations\WaitAzureHDInsightJobCommand.cs" />
     <Compile Include="Model\Commands\CommandInterfaces\IAddAzureHDInsightConfigValuesCommand.cs" />
     <Compile Include="Model\Commands\CommandInterfaces\IAddAzureHDInsightMetaStoreCommand.cs" />
+    <Compile Include="Model\Commands\CommandInterfaces\IAddAzureHDInsightScriptActionCommand.cs" />
     <Compile Include="Model\Commands\CommandInterfaces\IAddAzureHDInsightStorageCommand.cs" />
     <Compile Include="Model\Commands\CommandInterfaces\IGetAzureHDInsightClusterCommand.cs" />
     <Compile Include="Model\Commands\CommandInterfaces\IGetAzureHDInsightJobCommand.cs" />
@@ -220,6 +225,7 @@
     <Compile Include="Model\DataObjects\AzureHDInsightCluster.cs" />
     <Compile Include="Model\DataObjects\AzureHDInsightClusterConnection.cs" />
     <Compile Include="Model\DataObjects\AzureHDInsightConfig.cs" />
+    <Compile Include="Model\DataObjects\AzureHDInsightConfigAction.cs" />
     <Compile Include="Model\DataObjects\AzureHDInsightDefaultStorageAccount.cs" />
     <Compile Include="Model\DataObjects\AzureHDInsightHBaseConfiguration.cs" />
     <Compile Include="Model\DataObjects\AzureHDInsightHiveConfiguration.cs" />
@@ -233,6 +239,7 @@
     <Compile Include="Model\DataObjects\AzureHDInsightMetastoreType.cs" />
     <Compile Include="Model\DataObjects\AzureHDInsightOozieConfiguration.cs" />
     <Compile Include="Model\DataObjects\AzureHDInsightPigJobDefinition.cs" />
+    <Compile Include="Model\DataObjects\AzureHDInsightScriptAction.cs" />
     <Compile Include="Model\DataObjects\AzureHDInsightSqoopJobDefinition.cs" />
     <Compile Include="Model\DataObjects\AzureHDInsightStorageAccount.cs" />
     <Compile Include="Model\DataObjects\AzureHDInsightStreamingMapReduceJobDefinition.cs" />
