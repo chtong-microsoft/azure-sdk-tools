@@ -57,7 +57,7 @@ namespace Microsoft.WindowsAzure.Management.HDInsight.Cmdlet.PSCmdlets
             {
                 if (value.IsNull())
                 {
-                    throw new ArgumentNullException("value", "The value for the configuration can not be null.");
+                    throw new ArgumentNullException("value", "The value for the configuration cannot be null.");
                 }
                 this.command.Config.ClusterSizeInNodes = value.ClusterSizeInNodes;
                 this.command.Config.DefaultStorageAccount = value.DefaultStorageAccount;
@@ -86,14 +86,14 @@ namespace Microsoft.WindowsAzure.Management.HDInsight.Cmdlet.PSCmdlets
         }
 
         /// <summary>  
-        ///     Gets or sets the name of the script action.  
+        ///     Gets or sets the affected cluster roles for this script action.  
         /// </summary>  
-        [Parameter(Position = 2, Mandatory = false, HelpMessage = "The parameters of the script action.",
+        [Parameter(Position = 2, Mandatory = true, HelpMessage = "The affected cluster roles for this script action.",
             ValueFromPipeline = false, ParameterSetName = AzureHdInsightPowerShellConstants.ParameterSetAddScriptAction)]
-        public string Parameters
+        public ClusterNodeType[] ClusterRoleCollection
         {
-            get { return this.command.Parameters; }
-            set { this.command.Parameters = value; }
+            get { return this.command.ClusterRoleCollection; }
+            set { this.command.ClusterRoleCollection = value; }
         }
 
         /// <summary>  
@@ -108,14 +108,14 @@ namespace Microsoft.WindowsAzure.Management.HDInsight.Cmdlet.PSCmdlets
         }
 
         /// <summary>  
-        ///     Gets or sets the affected cluster roles for this script action.  
+        ///     Gets or sets the name of the script action.  
         /// </summary>  
-        [Parameter(Position = 5, Mandatory = true, HelpMessage = "The affected cluster roles for this script action.",
+        [Parameter(Position = 4, Mandatory = false, HelpMessage = "The parameters of the script action.",
             ValueFromPipeline = false, ParameterSetName = AzureHdInsightPowerShellConstants.ParameterSetAddScriptAction)]
-        public ClusterNodeType[] ClusterRoleCollection
+        public string Parameters
         {
-            get { return this.command.ClusterRoleCollection; }
-            set { this.command.ClusterRoleCollection = value; }
+            get { return this.command.Parameters; }
+            set { this.command.Parameters = value; }
         }
 
         /// <inheritdoc />  

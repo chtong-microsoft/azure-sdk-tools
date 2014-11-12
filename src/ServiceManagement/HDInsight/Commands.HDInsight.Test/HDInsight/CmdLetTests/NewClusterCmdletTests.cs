@@ -551,12 +551,12 @@ namespace Microsoft.WindowsAzure.Commands.Test.HDInsight.CmdLetTests
                             .WithParameter(CmdletConstants.StorageAccountKey, creds.Environments[0].AdditionalStorageAccounts[0].Key)
                             .AddCommand(CmdletConstants.AddAzureHDInsightScriptAction)
                             .WithParameter(CmdletConstants.ConfigActionName, "test1")
-                            .WithParameter(CmdletConstants.ConfigActionClusterRoleCollection, "HeadNode,DataNode")
+                            .WithParameter(CmdletConstants.ConfigActionClusterRoleCollection, "HeadNode")
                             .WithParameter(CmdletConstants.ScriptActionUri, "http://test1.com")
                             .WithParameter(CmdletConstants.ScriptActionParameters, "test1parameters")
                             .AddCommand(CmdletConstants.AddAzureHDInsightScriptAction)
                             .WithParameter(CmdletConstants.ConfigActionName, "test2")
-                            .WithParameter(CmdletConstants.ConfigActionClusterRoleCollection, "HeadNode,DataNode")
+                            .WithParameter(CmdletConstants.ConfigActionClusterRoleCollection, "HeadNode")
                             .WithParameter(CmdletConstants.ScriptActionUri, "http://test2.com")
                             .WithParameter(CmdletConstants.ScriptActionParameters, "test2parameters")
                             .AddCommand(CmdletConstants.NewAzureHDInsightCluster)
@@ -571,8 +571,8 @@ namespace Microsoft.WindowsAzure.Commands.Test.HDInsight.CmdLetTests
                     request.ConfigActions.ElementAt(0).Name == "test1" &&
                     request.ConfigActions.ElementAt(1).Name == "test2");
                 Assert.IsTrue(
-                    request.ConfigActions.ElementAt(0).ClusterRoleCollection.Count == 2 &&
-                    request.ConfigActions.ElementAt(0).ClusterRoleCollection.Count == 2);
+                    request.ConfigActions.ElementAt(0).ClusterRoleCollection.Count == 1 &&
+                    request.ConfigActions.ElementAt(1).ClusterRoleCollection.Count == 1);
 
                 Assert.AreEqual(1, results.Results.Count);
                 Assert.AreEqual(dnsName, results.Results.ToEnumerable<AzureHDInsightCluster>().First().Name);
